@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Producer-Consumer",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/prod-com.out",
+            "args": ["60", "10", "10"], // ["main thread time", "producers", "consumers"]
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Producer-Consumer"
+        }
+    ]
+}
